@@ -1,0 +1,10 @@
+Frying-Bird
+/*
+!/.gitignore
+!/README.md
+!Assets/
+!Assets/*
+!Packages/
+!Packages/*
+!ProjectSettings/
+!ProjectSettings/*
