@@ -591,6 +591,7 @@ MonoBehaviour:
   jumpForce: 7
   jumpCooldown: 0.25
   airMultiplier: 0.4
+  playerState: 0
   playerHeight: 1.7
   ground:
     serializedVersion: 2
