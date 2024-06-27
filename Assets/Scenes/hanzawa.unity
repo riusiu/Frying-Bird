@@ -148,7 +148,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 295525737}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 337, y: 327, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_ConstrainProportionsScale: 0
@@ -162,13 +162,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 295525737}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7dab4813cfda75448866ad97dcf27eb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   timeLimit: 120
-  timerText: {fileID: 0}
+  timerText: {fileID: 2092115163}
 --- !u!1 &407504500
 GameObject:
   m_ObjectHideFlags: 0
@@ -989,8 +989,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -422.8, y: -383}
-  m_SizeDelta: {x: 53.4541, y: 7.2665}
+  m_AnchoredPosition: {x: 26, y: -41}
+  m_SizeDelta: {x: 376.8815, y: 65.8326}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2092115162
 MonoBehaviour:
@@ -1004,8 +1004,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dab4813cfda75448866ad97dcf27eb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeLimit: 60
-  timerText: {fileID: 0}
+  timeLimit: 120
+  timerText: {fileID: 2092115163}
 --- !u!114 &2092115163
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1028,7 +1028,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 5
+    m_FontSize: 28
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -1047,7 +1047,7 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2092115160}
-  m_CullTransparentMesh: 1
+  m_CullTransparentMesh: 0
 --- !u!1 &2125112689
 GameObject:
   m_ObjectHideFlags: 0
