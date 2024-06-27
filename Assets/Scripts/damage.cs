@@ -11,6 +11,11 @@ public class damage : MonoBehaviour
         {
             UnityEngine.Debug.Log("Ouch!");
         }
+
+        if (collision.gameObject.tag == "fire")
+        {
+            UnityEngine.Debug.Log("Ouch!");
+        }
     }
     // Start is called before the first frame update
     void Start()
