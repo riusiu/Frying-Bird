@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -16,6 +17,8 @@ public class PlayerController : MonoBehaviour
     public float airMultiplier;
     bool readyToJump = true;
 
+    public int playerState = 0;
+
     [Header("GroundCheck")]
     public float playerHeight;
     public LayerMask ground;
@@ -26,6 +29,7 @@ public class PlayerController : MonoBehaviour
     bool grounded;
 
     float horizontalInput;
+    float verticalInput;
 
     Rigidbody2D rb;
     Vector2 moveDirection;
@@ -50,6 +54,11 @@ public class PlayerController : MonoBehaviour
             rb.drag = groundDrag;
         else
             rb.drag = 0;
+
+        if (playerState > 0)
+            rb.gravityScale = 0;
+        else 
+            rb.gravityScale = 1;
     }
 
     private void FixedUpdate()
@@ -58,6 +67,10 @@ public class PlayerController : MonoBehaviour
     }
     private void PlayerInput() {
         horizontalInput = Input.GetAxisRaw("Horizontal");
+        if (playerState > 0)
+        {
+            verticalInput = Input.GetAxisRaw("Vertical");
+        }
 
         if (Input.GetAxis("Jump")!= 0 && readyToJump && grounded) { 
             readyToJump = false;
@@ -70,6 +83,10 @@ public class PlayerController : MonoBehaviour
     private void MovePlayer()
     {
         moveDirection = orientation.right * horizontalInput;
+        if (playerState > 0)
+        {
+            moveDirection = orientation.right * horizontalInput + orientation.up * verticalInput;
+        }
 
         if (grounded)
             rb.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode2D.Force);
@@ -105,5 +122,16 @@ public class PlayerController : MonoBehaviour
             playerSprite.flipX = false;
         else if (horizontalInput < 0f)
             playerSprite.flipX = true;
+    }
+
+    private void SpriteChange()
+    {
+        switch(true)
+        {
+            case true when (playerState == 0):
+                break;
+            case true when (playerState == 1):
+                break;
+        }
     }
 }
