@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class egg : MonoBehaviour
 {
@@ -21,6 +22,7 @@ public class egg : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             Destroy(gameObject);
+            SceneManager.LoadScene("clear");
         }
     }
 }

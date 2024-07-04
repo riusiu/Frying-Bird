@@ -5,18 +5,28 @@ using UnityEngine;
 
 public class damage : MonoBehaviour
 {
-    public HP hpScript;
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "enemy")
+        if(collision.gameObject.tag == "enemy")
         {
-            hpScript.hp = hpScript.hp - 1f;
+            UnityEngine.Debug.Log("Ouch!");
         }
 
         if (collision.gameObject.tag == "fire")
         {
-            hpScript.hp = hpScript.hp - 2f;
+            UnityEngine.Debug.Log("Ouch!");
         }
+    }
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
     }
 
     

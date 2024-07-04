@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;//UIを使うときに書きます。
 
@@ -22,7 +20,7 @@ public class Player : MonoBehaviour
     private void OnTriggerEnter(Collider collider)
     {
         //タグを設定しているオブジェクトに接触したとき
-        if (collider.gameObject.tag == "Player")
+        if (collider.gameObject.tag == "Enemy")
         {
             //HPから1を引く
             Hp = Hp - 1;

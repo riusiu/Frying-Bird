@@ -18,7 +18,7 @@ public class arrow : MonoBehaviour
     {
         if (Rendered == true)//‚à‚µRendered‚ªtrue‚È‚çA
         {
-            transform.Translate(-0.05f, 0, 0);
+            transform.Translate(-0.5f, 0, 0);
         }
     }
 
