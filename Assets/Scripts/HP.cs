@@ -1,21 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class Hoge : MonoBehaviour
+public class HP : MonoBehaviour
 {
-    public void Start()
+    public float hp = 6;
+    public Image hpBar;
+    
+    private void Update()
     {
-        RectTransform rectTransform = gameObject.GetComponent<RectTransform>();
-        float width = 190;
-        float height = 20;
-
-        rectTransform.sizeDelta = new Vector2(width, height);
-
-        Debug.Log("Width: " + rectTransform.sizeDelta.x);    //10
-        Debug.Log("Height: " + rectTransform.sizeDelta.y);   //20
+        hpBar.fillAmount = (hp/6);
+        if (hp == 0) {
+            SceneManager.LoadScene("OtherSceneName");
+        }
     }
-    
-    
+
+
 }
