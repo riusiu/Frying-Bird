@@ -890,6 +890,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f66770e677bd4234b96bb180e9577a53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hpScript: {fileID: 1683370369}
 --- !u!212 &577581329
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6894,7 +6895,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 728ee3ba147e35a448fa3c7b47eb7305, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 6
+  hp: 2
   hpBar: {fileID: 1128448645}
 --- !u!1 &1995911423
 GameObject:

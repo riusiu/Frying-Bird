@@ -6,13 +6,13 @@ using UnityEngine.UI;
 
 public class HP : MonoBehaviour
 {
-    public float hp = 6;
+    public float hp = 6f;
     public Image hpBar;
 
     private void Update()
     {
-        hpBar.fillAmount = (hp / 6);
-        if (hp == 0)
+        hpBar.fillAmount = (hp / 6f);
+        if (hp <= 0f)
         {
             SceneManager.LoadScene("GameOver");
         }
