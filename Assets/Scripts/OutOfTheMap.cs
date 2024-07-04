@@ -14,6 +14,6 @@ public class OutOfTheMap : MonoBehaviour
     
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        SceneManager.LoadScene(scene.name);
+        SceneManager.LoadScene("GameOver");
     }
 }
