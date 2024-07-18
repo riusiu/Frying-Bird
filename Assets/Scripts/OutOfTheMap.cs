@@ -3,6 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/*
+	Mariani Francesco Paolo
+	-----------------------
+*/
+
 public class OutOfTheMap : MonoBehaviour
 {
     Scene scene;
