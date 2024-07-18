@@ -4,6 +4,11 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+/*
+	Mariani Francesco Paolo
+	-----------------------
+*/
+
 public class HP : MonoBehaviour
 {
     public float hp = 6f;
