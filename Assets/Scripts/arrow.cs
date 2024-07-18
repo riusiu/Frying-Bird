@@ -2,10 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+å°å·æ³°æ­£
+ãƒ¼ãƒ¼ãƒ¼ãƒ¼ãƒ¼ãƒ¼ãƒ¼ãƒ¼ãƒ¼ãƒ¼ãƒ¼ãƒ¼ãƒ¼ãƒ¼
+ãƒ‡ã‚¶ã‚¤ãƒ³ã¨å‹•ãã‚’åˆ¶ä½œã—ã¾ã—ãŸ
+*/
+
 public class arrow : MonoBehaviour
 {
-    private const string MAIN_CAMERA_TAG_NAME = "MainCamera";//ƒƒCƒ“ƒJƒƒ‰‚Ìƒ^ƒO–¼
-    private bool Rendered = false;//ƒJƒƒ‰‚É‰f‚Á‚Ä‚¢‚é‚©”»’è‚·‚é•Ï”
+    private const string MAIN_CAMERA_TAG_NAME = "MainCamera";//ãƒ¡ã‚¤ãƒ³ã‚«ãƒ¡ãƒ©ã®ã‚¿ã‚°å
+    private bool Rendered = false;//ã‚«ãƒ¡ãƒ©ã«æ˜ ã£ã¦ã„ã‚‹ã‹åˆ¤å®šã™ã‚‹å¤‰æ•°
 
     // Start is called before the first frame update
     void Start()
@@ -16,7 +22,7 @@ public class arrow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Rendered == true)//‚à‚µRendered‚ªtrue‚È‚çA
+        if (Rendered == true)//ã‚‚ã—RenderedãŒtrueãªã‚‰ã€
         {
             transform.Translate(-0.06f, 0, 0);
         }
@@ -33,11 +39,11 @@ public class arrow : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    void OnWillRenderObject()//ƒJƒƒ‰‚É‰f‚Á‚Ä‚éŠÔ‚ÉŒÄ‚Î‚ê‘±‚¯‚éˆ—
+    void OnWillRenderObject()//ã‚«ãƒ¡ãƒ©ã«æ˜ ã£ã¦ã‚‹é–“ã«å‘¼ã°ã‚Œç¶šã‘ã‚‹å‡¦ç†
     {
-        if (Camera.current.tag == MAIN_CAMERA_TAG_NAME)//‚à‚µƒƒCƒ“ƒJƒƒ‰‚É‰f‚Á‚½‚çA
+        if (Camera.current.tag == MAIN_CAMERA_TAG_NAME)//ã‚‚ã—ãƒ¡ã‚¤ãƒ³ã‚«ãƒ¡ãƒ©ã«æ˜ ã£ãŸã‚‰ã€
         {
-            Rendered = true;//Rendered‚ğtrue‚É‚·‚é
+            Rendered = true;//Renderedã‚’trueã«ã™ã‚‹
         }
     }
 }
