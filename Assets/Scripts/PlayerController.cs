@@ -4,6 +4,13 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
+/*
+	Mariani Francesco Paolo
+	-----------------------
+	Controller for axis movement, jump function
+	and basic sprite control
+*/
+
 public class PlayerController : MonoBehaviour
 {
     [Header("Movement")]
@@ -65,6 +72,7 @@ public class PlayerController : MonoBehaviour
     {
         MovePlayer();
     }
+    
     private void PlayerInput() {
         horizontalInput = Input.GetAxisRaw("Horizontal");
         if (playerState > 0)
@@ -80,6 +88,7 @@ public class PlayerController : MonoBehaviour
             Invoke(nameof(ResetJump), jumpCooldown);
         }
     }
+    
     private void MovePlayer()
     {
         moveDirection = orientation.right * horizontalInput;
@@ -134,4 +143,5 @@ public class PlayerController : MonoBehaviour
                 break;
         }
     }
+    
 }
