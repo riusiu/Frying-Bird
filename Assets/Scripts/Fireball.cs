@@ -2,6 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+小川泰正
+ーーーーーーーーーーーーーー
+デザインと動きを制作しました
+*/
+
 public class Fireball : MonoBehaviour
 {
     // Start is called before the first frame update
